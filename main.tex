@@ -1,0 +1,194 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{natbib}   
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage[capposition=top]{floatrow}     
+\usepackage{booktabs,fixltx2e}      
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage[utf8]{inputenc}
+\usepackage[font=large,labelfont=bf]{caption}
+\usepackage{dcolumn}
+\usepackage{float} 
+\usepackage{longtable}
+
+
+
+
+
+\title{Handbook Chapter distributions}
+\newcommand{\footremember}[2]{%
+    \footnote{#2}
+    \newcounter{#1}
+    \setcounter{#1}{\value{footnote}}%
+}
+\newcommand{\footrecall}[1]{%
+    \footnotemark[\value{#1}]%
+} 
+\author{%
+  Christian Schuster, Daniel Rogger, Annabelle Wittels, and Robert Lipinski\footremember{trailer}{Rogger (drogger@worldbank.org), Wittels (awittels@worldbank.org) and Lipinski (rlipinski@worldbank.org): Development Impact Evaluation Research Group, The World Bank; Schuster (c.schuster@ucl.ac.uk): University College London. We are grateful to XXX for helpful comments. The findings, interpretations, and conclusions expressed in this paper are entirely those of the authors. They do not necessarily represent the views of the World Bank and its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.}%
+ }
+\date{February 2021}      % Deleting this command produces today's date.
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\subsection{What are the most common indicators}
+
+
+\section{Where does the variation lie?}
+
+
+\subsection{Regression analysis: FE models}
+
+\input{Tables/full_FE_table_romania}
+
+\input{Tables/short_FE_table_romania}
+
+\subsection{Data-driven approach: Ridge regression}
+
+
+
+\subsection{country level -- compare distributions of indicators across countries}
+\subsection{across institutions}
+\subsubsection{Across departments within institutions}
+\subsection{Managerial vs. non-managerial level}
+\subsection{Tenure}
+\subsection{Gender}
+
+
+\section{Variation over time}
+\subsection{Similar patterns over time in relation to macro-factors vs. micro-factors}
+\item FEVS over time <- across individuals, within the same Qs
+    \item All Qs that are the same for all years
+    \item All Qs for all organisations that stay the same <- across indiv., within organisations
+\item Chile -- 2 years & variation over time <--   "within" individuals
+\item Try to repeat these analyses with Australia, UK and/or Canada
+\item Diff-in-Diff: to test the effect of macro-level changes; GDP changes/recession; large scale civil service reforms; changes in government; changes in heads of civil service or the equivalent 
+
+
+\newpage
+
+\section{\textit{Questions}}\\[0.5in]
+
+\begin{itemize}
+    \item Do we want to work with aggregate indices or individual questions? Especially for country-level comparison it would be good to have an (almost) exact overlap between the questions so it might be easier if we use individual questions\\
+    \item x
+
+\end{itemize}
+
+
+\clearpage
+
+
+
+\newcolumntype{s}{>{\hsize=.17\hsize\centering\arraybackslash}X}
+\newcolumntype{b}{>{\hsize=.35\hsize\raggedright\arraybackslash}X}
+\newcolumntype{m}{>{\hsize=.6\hsize\raggedright\arraybackslash}X}
+
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{1.\arabic{table}}
+
+
+\begin{table}[htbp]
+ \begin{adjustbox}{minipage=17cm, center}
+
+ \caption{\textbf{Summary table}\\
+          \textbf{The table shows summary statistics for overlapping questions}}
+
+\begin{tabularx}{\textwidth}{bmsssss}
+  \toprule
+    Country & Variable & Mean & Median & SD & Skewness & Kurtosis \\[.1in]
+    \midrule
+ \textbf{ALL} & Job satisfaction & 3.81 & 4 & 1.06 & -0.93 & 3.36 \\ 
+ \textbf{ALL} & Pay satisfaction & 3.57 & 4 & 1.16 & -0.7 & 2.61 \\ 
+ \textbf{ALL} & Work recommendation & 3.79 & 4 & 1.09 & -0.86 & 3.15 \\ 
+  FEVS (2019) & Job satisfaction & 3.76 & 4 & 1.07 & -0.88 & 3.23 \\ 
+  FEVS (2019) & Pay satisfaction & 3.59 & 4 & 1.15 & -0.73 & 2.7 \\ 
+  FEVS (2019) & Work recommendation & 3.77 & 4 & 1.09 & -0.84 & 3.1 \\ 
+  Romania & Job satisfaction & 4.61 & 5 & 0.65 & -2.09 & 8.89 \\ 
+  Romania & Pay satisfaction & 4.22 & 5 & 1.09 & -1.71 & 5.35 \\ 
+  Romania & Work recommendation & - & - & - & - & - \\ 
+  Chile & Job satisfaction & 4.16 & 4 & 0.87 & -1.23 & 4.81 \\ 
+  Chile & Pay satisfaction & 2.79 & 3 & 1.22 & 0.15 & 1.94 \\ 
+  Chile & Work recommendation & 3.81 & 4 & 1.08 & -0.86 & 3.21 \\ 
+  Chile (Covid) & Job satisfaction & 4.28 & 4 & 0.85 & -1.48 & 5.73 \\ 
+  Chile (Covid) & Pay satisfaction & - & - & - & - & - \\ 
+  Chile (Covid) & Work recommendation & 3.98 & 4 & 1.02 & -0.99 & 3.63 \\ 
+  Colombia & Job satisfaction & 4.41 & 5 & 0.77 & -1.75 & 7.27 \\ 
+  Colombia & Pay satisfaction & - & - & - & - & - \\ 
+  Colombia & Work recommendation & 4.38 & 5 & 0.8 & -1.64 & 6.56 \\ 
+  Guatemala & Job satisfaction & - & - & - & - & - \\ 
+  Guatemala & Pay satisfaction & 3.17 & 4 & 1.11 & -0.28 & 1.78 \\ 
+  Guatemala & Work recommendation & - & - & - & - & - \\ 
+  
+  
+  \bottomrule
+ \end{tabularx}
+\smallskip
+\end{adjustbox}
+\label{table:summary_tab}
+\end{table}
+
+
+\clearpage
+
+
+\begin{figure}[htbp]
+\centering
+%\vspace*{-3cm}
+\caption{Distribution of responses to:}
+\begin{adjustbox}{max width=1.6\linewidth,center}
+\begin{subfigure}{1.2\textwidth}
+\caption{\large{Job satisfaction question}}
+\includegraphics[width= 1\linewidth]{Figures_manual/Variation across countries - satisf_q.png}
+\label{fig:dist_satisf_q}
+\end{subfigure}
+\end{adjustbox}
+
+\hfill
+
+\begin{adjustbox}{max width=1.6\linewidth,center}
+\begin{subfigure}{1.2\textwidth}
+\caption{\large{Pay satisfaction question}}
+\includegraphics[width= 1\linewidth]{Figures_manual/Variation across countries - pay_satisf_q.png}
+\label{fig:dist_pay_satisf_q}
+\end{subfigure}
+
+\end{adjustbox}
+\label{fig:chile_sample_ci_3}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[htbp]\ContinuedFloat
+\centering
+\begin{adjustbox}{max width=1.6\linewidth,center}
+\begin{subfigure}{1.2\textwidth}
+\caption{\large{Work recommendation question}}
+\includegraphics[width= 1\linewidth]{Figures_manual/Variation across countries - recommend_q.png}
+\label{fig:dist_recommend_q}
+\end{subfigure}
+
+\end{adjustbox}
+\label{fig:chile_sample_ci_3}
+\end{figure}
+
+\section{Appendix}
+
+
+\end{document}
